@@ -23,6 +23,14 @@ jobs:
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
+        with:
+          accept-android-sdk-licenses: true
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+        with:
+          accept-android-sdk-licenses: true
+
       - name: Unzip project
         run: |
           unzip -o DoorsJournalAndroidProject.zip -d project
@@ -40,3 +48,4 @@ jobs:
           name: Doors-Journal-APK
           path: project/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
+
